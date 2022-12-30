@@ -35,8 +35,8 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-3" onClick={handleUpClick}>convert to uppercase</button>
-        <button className="btn btn-warning mx-3" onClick={handleLowClick}>convert to toLowerCase</button>
+        <button className="btn btn-primary mx-3 my-1" onClick={handleUpClick}>convert to uppercase</button>
+        <button className="btn btn-warning mx-3 my-1" onClick={handleLowClick}>convert to toLowerCase</button>
         <button className="btn btn-success " onClick={handleClearClick}>Clear Text</button>
       </div>
 
@@ -45,7 +45,7 @@ export default function TextForm(props) {
           <u>TEXT SUMMARY</u>
         </h2>
         <p>
-          {text.split(" ").length}words and {text.length}charecters present here
+          {text.split(" ").filter((ele)=>{ return ele.length!==0}).length}words and {text.length}charecters present here
         </p>
         <h3>
           <u>PREVIEW TEXT</u>
